@@ -1,0 +1,15 @@
+{
+  "frame_time_ms": 33,
+  "gravity": 0.50,
+  "jump_velocity": -3.0,
+  "max_jumps": 2,
+  "player_start_x": 10,
+  "obstacle_width": 2,
+  "obstacle_height_min": 2,
+  "obstacle_height_max": 4,
+  "spawn_interval_min": 24,
+  "spawn_interval_max": 54,
+  "obstacle_move_interval_frames": 2,
+  "min_screen_width": 40,
+  "min_screen_height": 12
+}
