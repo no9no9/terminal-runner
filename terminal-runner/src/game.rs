@@ -7,7 +7,7 @@ use crossterm::event::{self, Event, KeyCode, KeyEventKind};
 use crossterm::terminal::size;
 use rand::Rng;
 
-use crate::config::AppConfig;
+use crate::config::{AppConfig, ParsedDecoration};
 use crate::render::{draw_frame, draw_game_over};
 use crate::terminal::{wait_for_game_over_action, GameOverAction};
 
@@ -18,7 +18,7 @@ pub struct Obstacle {
     pub passed: bool,
 }
 
-pub fn run_game(out: &mut Stdout, config: &AppConfig) -> Result<(), Box<dyn Error>> {
+pub fn run_game(out: &mut Stdout, config: &AppConfig, decoration: &ParsedDecoration) -> Result<(), Box<dyn Error>> {
     let frame_time = std::time::Duration::from_millis(config.frame_time_ms);
 
     let mut rng = rand::thread_rng();
@@ -138,6 +138,7 @@ pub fn run_game(out: &mut Stdout, config: &AppConfig) -> Result<(), Box<dyn Erro
                 player_y_u16,
                 &obstacles,
                 score,
+                decoration,
             )?;
 
             if hit {
