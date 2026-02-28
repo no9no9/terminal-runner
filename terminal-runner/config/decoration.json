@@ -1,0 +1,9 @@
+{
+  "player_char": "@",
+  "obstacle_char": "#",
+  "ground_char": "=",
+  "player_color": "green",
+  "obstacle_color": "red",
+  "ground_color": "yellow",
+  "background_color": "black"
+}
